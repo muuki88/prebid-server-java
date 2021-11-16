@@ -22,6 +22,9 @@ class App {
     String keywords
 
     static App getDefaultApp() {
-        new App(id: PBSUtils.randomString)
+        new App().tap {
+            id = PBSUtils.randomString
+            publisher = Publisher.defaultPublisher
+        }
     }
 }
